@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "========================================="
+echo "       SYSTEM IDENTITY REPORT"
+echo "========================================="
+echo ""
+echo "Hostname: $(hostname)"
+echo "Logged in user: $(whoami)"
+echo "Home directory: $HOME"
+echo ""
+echo "Operating System Details:"
+cat /etc/os-release | grep PRETTY_NAME | cut -d'"' -f2
+echo ""
+echo "Kernel Version: $(uname -r)"
+echo ""
+echo "System Uptime: $(uptime -p)"
+echo ""
+echo "Current Date and Time: $(date)"
+echo ""
+echo "Open Source License: GNU General Public License v2"
+echo "========================================="
